@@ -1,0 +1,13 @@
+RewriteEngine on
+
+#everything ended in php
+RewriteCond %{REQUEST_FILENAME} .*\.php$
+RewriteRule ^(.*)\.php$ index.php/$1
+
+RewriteCond %{REQUEST_URI} \.(gif|png|jpg|jpeg|jfif|bmp|css|js|less)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+#empty uri
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
