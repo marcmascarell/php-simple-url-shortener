@@ -18,7 +18,7 @@ If you are looking for a simple shortener and don't need lot of features you can
       - link varchar (255)
       - clicks int (11)
     
-2. Fill **lib/config.php** with your own data
+2. Fill `lib/config.php` with your own data
 3. Ready
 
 ## Additional info and thanks
